@@ -1,0 +1,16 @@
+{
+ "doctype": "DocType",
+ "name": "Intake Profile Field",
+ "module": "Neotec Intake",
+ "istable": 1,
+ "engine": "InnoDB",
+ "field_order": ["source_key","target_field","scope","transform","default_value"],
+ "fields": [
+  {"fieldname":"source_key","fieldtype":"Data","label":"Source Key / Column","in_list_view":1,"reqd":1,"description":"Column header (Excel/CSV) or JSON key returned by extraction."},
+  {"fieldname":"target_field","fieldtype":"Data","label":"Target Field","in_list_view":1,"reqd":1,"description":"Fieldname on the target DocType (e.g. supplier, posting_date, qty)."},
+  {"fieldname":"scope","fieldtype":"Select","label":"Scope","options":"header\nrow","default":"row","in_list_view":1,"description":"header = one value for the whole document; row = a line item."},
+  {"fieldname":"transform","fieldtype":"Select","label":"Transform","options":"none\nnumber\ndate\nupper\nlower\nstrip","default":"none","in_list_view":1},
+  {"fieldname":"default_value","fieldtype":"Data","label":"Default"}
+ ],
+ "permissions": []
+}

@@ -1,0 +1,37 @@
+{
+ "doctype": "DocType",
+ "name": "Intake Document",
+ "module": "Neotec Intake",
+ "autoname": "format:INTAKE-{YYYY}-{#####}",
+ "engine": "InnoDB",
+ "track_changes": 1,
+ "field_order": ["title","intake_profile","cb0","status","source_type_detected","sec_over","supplier","item_code","cost_center","cb_over","expense_account","sec_file","attachment","sec_act","extracted_json","preview_html","sec_res","created_doctype","created_document","cb1","log"],
+ "fields": [
+  {"fieldname":"title","fieldtype":"Data","label":"Title","in_list_view":1},
+  {"fieldname":"intake_profile","fieldtype":"Link","label":"Intake Profile","options":"Intake Profile","reqd":1,"in_list_view":1},
+  {"fieldname":"cb0","fieldtype":"Column Break"},
+  {"fieldname":"status","fieldtype":"Select","label":"Status","options":"Draft\nExtracted\nError\nCommitted","default":"Draft","in_list_view":1,"read_only":1},
+  {"fieldname":"source_type_detected","fieldtype":"Data","label":"Detected Source","read_only":1},
+  {"fieldname":"sec_over","fieldtype":"Section Break","label":"Defaults for the created document","description":"Optional. Used when the document is created. Set the Supplier here if it could not be matched automatically."},
+  {"fieldname":"supplier","fieldtype":"Link","label":"Supplier","options":"Supplier","description":"Override. If set, this Supplier is used instead of matching by the seller's VAT or name."},
+  {"fieldname":"item_code","fieldtype":"Link","label":"Item","options":"Item","description":"Use this ERPNext Item for the line(s). Pulls the item's expense account, UOM, etc."},
+  {"fieldname":"cost_center","fieldtype":"Link","label":"Cost Center","options":"Cost Center"},
+  {"fieldname":"cb_over","fieldtype":"Column Break"},
+  {"fieldname":"expense_account","fieldtype":"Link","label":"Expense Account","options":"Account"},
+  {"fieldname":"sec_file","fieldtype":"Section Break","label":"Source file"},
+  {"fieldname":"attachment","fieldtype":"Attach","label":"Attachment","reqd":1,"description":"Upload an image, PDF, Excel or CSV."},
+  {"fieldname":"sec_act","fieldtype":"Section Break","label":"Extracted data"},
+  {"fieldname":"extracted_json","fieldtype":"Code","label":"Extracted JSON","options":"JSON","description":"Parsed payload. Review/correct before creating the document."},
+  {"fieldname":"preview_html","fieldtype":"HTML","label":"Preview"},
+  {"fieldname":"sec_res","fieldtype":"Section Break","label":"Result"},
+  {"fieldname":"created_doctype","fieldtype":"Data","label":"Created DocType","read_only":1},
+  {"fieldname":"created_document","fieldtype":"Dynamic Link","label":"Created Document","options":"created_doctype","read_only":1},
+  {"fieldname":"cb1","fieldtype":"Column Break"},
+  {"fieldname":"log","fieldtype":"Small Text","label":"Log","read_only":1}
+ ],
+ "permissions": [
+  {"role":"System Manager","read":1,"write":1,"create":1,"delete":1},
+  {"role":"Accounts Manager","read":1,"write":1,"create":1},
+  {"role":"Sales User","read":1,"write":1,"create":1}
+ ]
+}

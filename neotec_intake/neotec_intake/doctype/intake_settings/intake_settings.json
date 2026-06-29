@@ -1,0 +1,23 @@
+{
+ "doctype": "DocType",
+ "name": "Intake Settings",
+ "module": "Neotec Intake",
+ "issingle": 1,
+ "engine": "InnoDB",
+ "field_order": ["llm_section","provider","base_url","model","vision_model","api_key","col_break_1","ocr_enabled","max_pages","note"],
+ "fields": [
+  {"fieldname":"llm_section","fieldtype":"Section Break","label":"AI / LLM (for PDF & image extraction)"},
+  {"fieldname":"provider","fieldtype":"Select","label":"Provider","options":"none\nollama\nopenai_compatible","default":"none","description":"Local Ollama keeps data on-prem (PDPL-friendly)."},
+  {"fieldname":"base_url","fieldtype":"Data","label":"Base URL","default":"http://localhost:11434"},
+  {"fieldname":"model","fieldtype":"Data","label":"Text model","default":"llama3.1"},
+  {"fieldname":"vision_model","fieldtype":"Data","label":"Vision model","default":"llama3.2-vision"},
+  {"fieldname":"api_key","fieldtype":"Password","label":"API key (if required)"},
+  {"fieldname":"col_break_1","fieldtype":"Column Break"},
+  {"fieldname":"ocr_enabled","fieldtype":"Check","label":"Try local OCR (pytesseract) before vision","default":"0"},
+  {"fieldname":"max_pages","fieldtype":"Int","label":"Max PDF pages to read","default":"10"},
+  {"fieldname":"note","fieldtype":"Small Text","label":"Note","read_only":1,"default":"Structured files (Excel/CSV) are parsed deterministically and need no AI. PDFs and images use the configured model to extract fields as JSON."}
+ ],
+ "permissions": [
+  {"role":"System Manager","read":1,"write":1,"create":1}
+ ]
+}

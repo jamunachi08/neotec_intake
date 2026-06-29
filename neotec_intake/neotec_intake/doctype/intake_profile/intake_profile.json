@@ -1,0 +1,29 @@
+{
+ "doctype": "DocType",
+ "name": "Intake Profile",
+ "module": "Neotec Intake",
+ "autoname": "field:profile_name",
+ "engine": "InnoDB",
+ "field_order": ["profile_name","enabled","cb0","target_doctype","builder","source_type","sec_src","default_company","sheet","header_row","child_table_field","sec_map","field_map","sec_opt","options"],
+ "fields": [
+  {"fieldname":"profile_name","fieldtype":"Data","label":"Profile Name","reqd":1,"unique":1,"in_list_view":1},
+  {"fieldname":"enabled","fieldtype":"Check","label":"Enabled","default":"1"},
+  {"fieldname":"cb0","fieldtype":"Column Break"},
+  {"fieldname":"target_doctype","fieldtype":"Link","label":"Target DocType","options":"DocType","reqd":1,"in_list_view":1,"description":"The ERPNext document to create (e.g. Purchase Invoice, Journal Entry, Lead)."},
+  {"fieldname":"builder","fieldtype":"Select","label":"Builder","options":"auto\ngeneric\npurchase_invoice\npurchase_order\njournal_entry\nlead","default":"auto","in_list_view":1,"description":"auto = pick by target doctype; generic = set mapped fields directly."},
+  {"fieldname":"source_type","fieldtype":"Select","label":"Source Type","options":"auto\nexcel\ncsv\npdf\nimage","default":"auto","in_list_view":1},
+  {"fieldname":"sec_src","fieldtype":"Section Break","label":"Source options"},
+  {"fieldname":"default_company","fieldtype":"Link","label":"Default Company","options":"Company"},
+  {"fieldname":"sheet","fieldtype":"Data","label":"Excel Sheet (blank = first)"},
+  {"fieldname":"header_row","fieldtype":"Int","label":"Header Row (1-based, 0 = auto-detect)","default":"0"},
+  {"fieldname":"child_table_field","fieldtype":"Data","label":"Target Child Table Field","description":"For line items, the table fieldname on the target (e.g. items, accounts)."},
+  {"fieldname":"sec_map","fieldtype":"Section Break","label":"Field mapping"},
+  {"fieldname":"field_map","fieldtype":"Table","label":"Field Map","options":"Intake Profile Field"},
+  {"fieldname":"sec_opt","fieldtype":"Section Break","label":"Advanced"},
+  {"fieldname":"options","fieldtype":"Code","label":"Options (JSON)","options":"JSON","description":"Extra builder options, e.g. {\"supplier\": \"Default Supplier\", \"expense_account\": \"...\"}."}
+ ],
+ "permissions": [
+  {"role":"System Manager","read":1,"write":1,"create":1,"delete":1},
+  {"role":"Accounts Manager","read":1,"write":1,"create":1}
+ ]
+}
