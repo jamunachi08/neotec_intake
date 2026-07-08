@@ -1,0 +1,93 @@
+{
+ "charts": [],
+ "content": "[{\"id\": \"hdr_main\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Neotec DocIntake</b></span>\", \"col\": 12}}, {\"id\": \"para_intro\", \"type\": \"paragraph\", \"data\": {\"text\": \"Read images, PDFs, Excel and CSV files into <b>draft</b> ERPNext documents for review before posting.\", \"col\": 12}}, {\"id\": \"sp1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"hdr_sc\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h6\\\"><b>Shortcuts</b></span>\", \"col\": 12}}, {\"id\": \"sc_doc\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Intake Document\", \"col\": 3}}, {\"id\": \"sc_prof\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Intake Profile\", \"col\": 3}}, {\"id\": \"sc_set\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Intake Settings\", \"col\": 3}}, {\"id\": \"sp2\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"hdr_ref\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h6\\\"><b>Masters & Configuration</b></span>\", \"col\": 12}}, {\"id\": \"card_intake\", \"type\": \"card\", \"data\": {\"card_name\": \"Intake\", \"col\": 4}}]",
+ "creation": "2026-06-29 14:30:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "file",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Neotec Intake",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Intake",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Intake Document",
+   "link_count": 0,
+   "link_to": "Intake Document",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Intake Profile",
+   "link_count": 0,
+   "link_to": "Intake Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Intake Settings",
+   "link_count": 0,
+   "link_to": "Intake Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-06-29 14:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Neotec Intake",
+ "name": "Neotec Intake",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Intake Document",
+   "link_to": "Intake Document",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Intake Profile",
+   "link_to": "Intake Profile",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "label": "Intake Settings",
+   "link_to": "Intake Settings",
+   "type": "DocType"
+  }
+ ],
+ "title": "Neotec Intake"
+}
